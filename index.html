@@ -12,15 +12,44 @@
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <title> Home Page | Karthik Kandula </title>
+    <title> Home Page | Karthik Kandula | IT 354</title>
   </head>
   <body>
-    <style media="screen">
-
-    </style>
-    <nav class="navbar navbar-expand-sm bg-light fixed-top" >
-      <a class="navbar-brand" href="#"> <h3>Karthik Kandula</h3> </a>
-      <ul class="nav">
+    <!-- Top Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-transparent fixed-top" >
+      <!-- SVG Anchor -->
+      <ul class="nav"> <!-- <img src="Assets/Asset-2.SVG" alt="Logo Image" style="width:130px;"> -->
+        <li class="nav-item">
+          <a href="index.html" class="navbar-brand"> Home
+        <!-- Logo SVG -->
+        <!--<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185 83.96">
+          <defs>
+            <style>
+            .cls-1
+            {
+              font-size:36px;
+              font-family:Adventure;
+              fill: #ffffff
+            }
+            .cls-2
+            {
+              font-size:36px;
+              font-family:Adventure;
+              font-weight: bold;
+              fill: #ffffff
+            }
+            </style>
+          </defs>
+          <title>Karthik Kandula Logo</title>
+          <g id="Layer_2" data-name="Layer 2">
+            <g id="Layer_1-2" data-name="Layer 1">
+              <text class="cls-2" transform="translate(47.05 30.29)" >KARTHIK</text>
+              <text class="cls-1" transform="translate(0 67.87)">KANDULA</text>
+            </g>
+          </g>
+        </svg> -->
+      </a>
+      </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
         </li>
@@ -36,10 +65,75 @@
       </ul>
     </nav>
 
-    <div class="jumbotron text-center" style="margin-top:65px">
-      <h1>My First Bootstrap Page</h1>
-      <p>Resize this responsive page to see the effect!</p>
+    <!-- Index page beach image container -->
+    <div class="image-container text-center">
+      <img class="img-fluid" src="Assets/index-beach-image.jpg" alt="Index page main image - Beach">
+      <div class="center-text">
+        Hi, Welcome to my website
+      </div>
+
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185 83.96" class="center-below center-svg">
+        <defs>
+          <style>
+          .cls-1
+          {
+            font-size:36px;
+            font-family:Adventure;
+            fill: #ffffff
+          }
+          .cls-2
+          {
+            font-size:36px;
+            font-family:Adventure;
+            font-weight: bold;
+            fill: #ffffff
+          }
+          </style>
+        </defs>
+        <title>Karthik Kandula Logo</title>
+        <g id="Layer_2" data-name="Layer 2">
+          <g id="Layer_1-2" data-name="Layer 1">
+            <text class="cls-2" transform="translate(47.05 30.29)" >KARTHIK</text>
+            <text class="cls-1" transform="translate(0 67.87)">KANDULA</text>
+          </g>
+        </g>
+      </svg> -->
+      <!--<img src="Assets/Asset-1.SVG" class="img-fluid center-below" alt="Main Logo"> -->
     </div>
+
+    <!-- About me container -->
+
+    <div class="container pt-4">
+      <h2 class="text-center pb-3">ABOUT ME</h2>
+      <div class="row">
+        <div class="col-6 p-3">
+          <img src="Assets/what-you-think.jpg" class="img-fluid img-responsive" alt="My picture">
+        </div>
+        <div class="col-6 p-3">
+          <p class="font-weight-normal text-left">My name is Karthik Kandula, I am a Graduate Student in Information Systems at Illinois State University graduating in December 2020.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Purpose of this website -->
+    <div class="container pt-4">
+      <h2 class="text-center pb-3">Purpose of this website</h2>
+      <p>This website serves as a tutorial to the things I've learned during part of the class IT354 - Advances Web Technologies </p>
+      <p>This website is also used to submit assignments and practice what is taught in class</p>
+    </div>
+
+    <!-- Font Pairing & Color scheme -->
+    <div class="container pt-4">
+      <div class="row">
+        <div class="col-6 p-3">
+          <h3 class="text-center">Color Scheme</h3>
+        </div>
+        <div class="col-6 p-3">
+          <h3 class="text-center">Font Pairing</h3>
+        </div>
+      </div>
+    </div>
+
     <div class="container">
       <div class="row">
         <div class="col-sm-4">
@@ -54,9 +148,9 @@
           </ul>
         </div>
         <div class="col-sm-4">
-          <h3>Column 2</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+          <h3>Fonts Used</h3>
+          <p>Logo - Adventure in Adobe Illustrator</p>
+          <p>index beach image source - https://wallpaperaccess.com/exotic-travel </p>
         </div>
         <div class="col-sm-4">
           <h3>Column 3</h3>
@@ -65,106 +159,7 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <h3>Assignments</h3>
-          <ul>
-            <li>
-              <a href="Assignments/First-Website/index.html">First Website</a>
-            </li>
-            <li>
-              <a href="Assignments/Second-Website/index.html">Second Website</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-sm-4">
-          <h3>Column 2</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-        </div>
-        <div class="col-sm-4">
-          <h3>Column 3</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <h3>Assignments</h3>
-          <ul>
-            <li>
-              <a href="Assignments/First-Website/index.html">First Website</a>
-            </li>
-            <li>
-              <a href="Assignments/Second-Website/index.html">Second Website</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-sm-4">
-          <h3>Column 2</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-        </div>
-        <div class="col-sm-4">
-          <h3>Column 3</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <h3>Assignments</h3>
-          <ul>
-            <li>
-              <a href="Assignments/First-Website/index.html">First Website</a>
-            </li>
-            <li>
-              <a href="Assignments/Second-Website/index.html">Second Website</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-sm-4">
-          <h3>Column 2</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-        </div>
-        <div class="col-sm-4">
-          <h3>Column 3</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <h3>Assignments</h3>
-          <ul>
-            <li>
-              <a href="Assignments/First-Website/index.html">First Website</a>
-            </li>
-            <li>
-              <a href="Assignments/Second-Website/index.html">Second Website</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-sm-4">
-          <h3>Column 2</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-        </div>
-        <div class="col-sm-4">
-          <h3>Column 3</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-        </div>
-      </div>
-    </div>
+
     <h1>This is the Home Page </h1>
     <a href="Assignments/First-Website/index.html">First Website</a>
   </body>

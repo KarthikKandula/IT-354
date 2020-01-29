@@ -1,3 +1,45 @@
-body {
-    width: auto;
+.nav-link {
+
 }
+
+/*svg {
+  width: 100px;
+}*/
+
+.image-container {
+  position:relative;
+}
+.center-text{
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  font-size: 4vw;
+  color: #ffffff;
+}
+.center-svg {
+  width: 500px;
+}
+.center-below {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  color: #ffffff;
+}
+
+.about-me-contain {
+  text-align: center;
+  padding: 40px;
+}
+.about-me-text{
+  padding: 50px;
+}
+
+.my-image{
+  width: 500px;
+  align-items: center;
+}
+
+/*
+ .jumbotron {
+  padding: 0px !important;
+} */
