@@ -1,5 +1,19 @@
-.logo-svg {
-  width: 100px;
+/* Nav CSS */
+.nav-link {
+  color: #FFFFFF !important;
+}
+.nav-class {
+  background-color: #2677FF !important;
+}
+.logo-font {
+  /* Adventure Regular */
+  font-family: adventure, script;
+  font-weight: 400;
+  font-size: 35px !important;
+  font-style: normal;
+}
+.nav-link{
+  margin-top: 10px;
 }
 
 .image-container {
@@ -23,18 +37,79 @@
 }
 
 .about-me-contain {
-  text-align: center;
-  padding: 40px;
+  background-color: #99EAFF;
 }
 .about-me-text{
   padding: 50px;
 }
-
 .my-image{
   width: 500px;
   align-items: center;
 }
 
+.purpose-web-contain{
+  background-color: #8CFFD7;
+}
+.purpose-contain{
+  background-color: #FFFFFF;
+}
+.gradient-try {
+  background: linear-gradient(to right, #2677FF 0%, #26FF9C 100%);
+}
+
+.clr-schme-row{
+  color: #040404;
+}
+.clr-schme-1 {
+  background-color: #2677FF;
+  height: 150px;
+}
+.clr-schme-2 {
+  background-color: #23A0E8;
+}
+.clr-schme-3 {
+  background-color: #32E9FF;
+}
+.clr-schme-4 {
+  background-color: #23E8C5;
+}
+.clr-schme-5 {
+  background-color: #26FF9C;
+}
+
+.clr-schme-2-1 {
+  background-color: #8CAAFF;
+  height: 150px;
+}
+.clr-schme-2-2 {
+  background-color: #80B6E8;
+}
+.clr-schme-2-3 {
+  background-color: #99E9FF;
+}
+.clr-schme-2-4 {
+  background-color: #80E8E3;
+}
+.clr-schme-2-5 {
+  background-color: #8CFFD9;
+}
+
+.clr-schme-3-1 {
+  background-color: #2677FF;
+  height: 150px;
+}
+.clr-schme-3-2 {
+  background-color: #23A0E8;
+}
+.clr-schme-3-3 {
+  background-color: #32E9FF;
+}
+.clr-schme-3-4 {
+  background-color: #23E8C5;
+}
+.clr-schme-3-5 {
+  background-color: #26FF9C;
+}
 /*
  .jumbotron {
   padding: 0px !important;
