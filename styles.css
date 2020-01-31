@@ -16,6 +16,8 @@
   margin-top: 10px;
 }
 
+/* Main index page */
+/* Beach image container */
 .image-container {
   position:relative;
 }
@@ -26,9 +28,6 @@
   font-size: 4vw;
   color: #ffffff;
 }
-.center-svg {
-  width: 500px;
-}
 .center-below {
   position: absolute;
   top: 10%;
@@ -36,6 +35,7 @@
   color: #ffffff;
 }
 
+/* About me container */
 .about-me-contain {
   background-color: #99EAFF;
 }
@@ -47,6 +47,7 @@
   align-items: center;
 }
 
+/* Purpose container */
 .purpose-web-contain{
   background-color: #8CFFD7;
 }
@@ -57,6 +58,7 @@
   background: linear-gradient(to right, #2677FF 0%, #26FF9C 100%);
 }
 
+/* Color Scheme container */
 .clr-schme-row{
   color: #040404;
 }
@@ -110,7 +112,3 @@
 .clr-schme-3-5 {
   background-color: #26FF9C;
 }
-/*
- .jumbotron {
-  padding: 0px !important;
-} */
