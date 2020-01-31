@@ -1,3 +1,21 @@
+/* Font declaration */
+@font-face{
+  font-family: Palatino;
+  src: url(Assets/Fonts/Palatino.ttf);
+}
+@font-face{
+  font-family: Cantarell;
+  src: url(Assets/Fonts/Cantarell-Regular.ttf);
+}
+
+h1, h2, h3, h4, h5, h6, a {
+  font-family: Cantarell;
+}
+p {
+  font-family: Palatino;
+  font-size: large;
+}
+
 /* Nav CSS */
 .nav-link {
   color: #FFFFFF !important;
@@ -56,6 +74,11 @@
 }
 .gradient-try {
   background: linear-gradient(to right, #2677FF 0%, #26FF9C 100%);
+  
+}
+.gradient-try p {
+  font-family: Palatino;
+  font-size: large;
 }
 
 /* Color Scheme container */
