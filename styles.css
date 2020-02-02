@@ -39,7 +39,8 @@ p {
 .image-container {
   position:relative;
 }
-.center-text{
+.center-text p{
+  font-family: Cantarell;
   position: absolute;
   top: 20%;
   left: 25%;
