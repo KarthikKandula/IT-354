@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.typekit.net/otu6ffb.css">
     <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="first-styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -17,7 +18,7 @@
   </head>
   <body>
     <!-- Top Navigation -->
-    <nav class="navbar navbar-expand-sm navbar-dark fixed-top nav-class"> <!-- fixed-top -->
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top sticky-top nav-class"> <!-- fixed-top -->
       <ul class="navbar-nav text-center"> <!-- <img src="Assets/Asset-2.SVG" alt="Logo Image" style="width:130px;"> -->
         <li class="nav-item">
           <a href="../../index.html" class="navbar-brand logo-font"> KARTHIK KANDULA </a>
@@ -36,12 +37,175 @@
         </li>
       </ul>
     </nav>
-    
-    <div class="container assn-first-container" style="margin-top: 60px;">
-      <h3>Assignment Details</h3>
+
+    <!-- Page assingment details -->
+    <div class="container-fluid p-2">
+      <div class="container">
+        <h3>Assignment Details</h3>
+        <p>Tutorial over the following topics</p>
+        <p>Topics to be covered</p>
+        <ol>
+          <li> <a href="#ValuesTypes">Values and Types</a>
+            <ul>
+              <li>Numbers</li>
+              <li>Strings</li>
+            </ul>
+          </li>
+          <li><a href="#UnaryOperators">Unary Operators</a>
+            <ul>
+              <li>typeof</li>
+              <li>unary plus</li>
+              <li>unary minus</li>
+              <li>logical not</li>
+              <li>increment</li>
+              <li>decrement</li>
+              <li>delete</li>
+            </ul>
+          </li>
+          <li>Hoisting</li>
+        </ol>
+      </div>
     </div>
-    <h1>This is the main index page of First Website </h1>
-    <h2>First Video is also included in this page</h2>
-    <a href="../../index.html">Home Page</a>
+
+    <!-- Values and Types -->
+    <div class="container-fluid" id="ValuesTypes">
+      <div class="container">
+        <h3 class="text-center mb-md-1">Values and Types</h3>
+
+        <h4>Numbers</h4>
+        <p>JavaScript only has one type of number. Numbers can be written in the following ways</p>
+        <pre class="mb-0"><code> 
+var number1 = 5.75; // 5.75 --> A number with decimals
+var number2 = 5; // 5
+var number4 = 1546e6; // 1546000000 --> Numbers in exponential form
+var number5 = 1345e-5; // 0.01345
+        </code></pre>
+
+        <p>Different arithmetic operations with Numbers in JavaScript </p>
+        <pre class="mb-0"><code>
+var number1 = 5.75; // Number declaration
+var number2 = 5;
+
+var jsAdd = number1 + number2; // 10.75 --> Addition
+var jsSub = number1 - number2; // 0.75 --> Subtraction
+var jsMul = number1 * number2; // 28.75 --> Multiplication
+var jsDiv = number1 / number2; // 1.15 --> Division
+        </code></pre>
+
+        <h4>Strings</h4>
+        <p>A JavaScript String is zero or more characters enclosed in single ' ' or double quotes " "</p>
+        <pre><code>
+var jsString = "Hello World!" // Hello World!
+
+var jsStringdq = "Hello World!" // Double Quotes
+var jsStringsq = 'Hello World!' // Single Quotes
+        </code></pre>
+      </div>
+    </div>
+
+    <!-- Unary Operators -->
+    <div class="container-fluid" >
+      <div class="container">
+        <h3 class="text-center" id="UnaryOperators">Unary Operators</h3>
+        <p>Unary Operators take a single operand and performs an operation. Unary operators cannot be overridden so their functionality is guaranteed.</p>
+        <p class="mb-2">These are a few types of Unary Operators: </p>
+        
+        <!-- Unary Operator typeof -->
+        <h4>typeof</h4>
+        <p>Returns data type of the operand</p>
+        <pre><code>
+var jsString = "Hello World"
+typeof(jsString) // returns 'string'
+
+var jsNum = 20
+typeof(jsNum) // returns 'number'
+
+typeof(true) // returns 'boolean'
+typeof(false) // returns 'boolean'
+        </code></pre>
+        
+        <h4>Unary plus (+)</h4>
+        <p>Converts the operand into a number</p>
+        <p>If the operand cannot be converted into a number returns <b>NaN</b></p>
+        <pre><code>
+ar a = 3
++a // returns '3'
+
+var b = "Hello"
++b // returns NaN
+        </code></pre>
+        
+        <h4>Unary minus (-)</h4>
+        <p>Converts the operand into a number and negates it</p>
+        <p>If the operand cannot be converted into a number returns <b>NaN</b></p>
+        <pre><code>
+ar a = 3
+-a // returns '-3'
+          
+var b = "Hello"
+-b // returns NaN
+          </code></pre>
+        <h4>Logical Not (!) </h4>
+        <p>Converts the operand into it's boolean equivalent and returns it's opposite</p>
+        <pre><code>
+var a = true
+!a // returns 'false'
+
+var b = false
+!b // returns 'true'
+        </code></pre>
+
+        <h4>Increment (++) </h4>
+        <p>This operand adds one to its value and returns it</p>
+        <pre><code>
+var aaa = 5
+var bbb = 5
+console.log(++aaa)
+console.log(bbb++)
+console.log(bbb)
+        </code></pre>
+
+        <h4>Decrement (--) </h4>
+        <p>This operand subtracts one to its value and returns it</p>
+        <pre><code>
+var aaa = 5
+var bbb = 5
+console.log(--aaa)
+console.log(bbb--)
+console.log(bbb)
+          </code></pre>
+
+        <h4>delete</h4>
+        <p>Deletes values of specific index of an array or a specific property of an object </p>
+        <p>Return Values</p>
+        <ul> 
+          <li><b>true</b> - if successfully deleted the property or if the property does not exist</li>
+          <li><b>false</b> - if failed to delete an item </li>
+        </ul>
+        <pre><code>
+var numArray = [1,2,3]
+delete numArray[1] // returns 'true'
+
+var delVar = 10
+delete delVar // returns 'false'
+        </code></pre>
+
+      </div>
+    </div>
+
+    <!-- Hoisting -->
+    <div class="container-fluid">
+      <div class="container">
+        <h3>Hoisting</h3>
+        <p>In JavaScript a variable can be used before it is declared.</p>
+        <p>Hoisting is a default JavaScript behavior to move all the variable declarations to the top.</p>
+      </div>
+    </div>
+
+    <footer>
+      few of the content is referenced from https://www.w3schools.com/js/default.asp
+      https://scotch.io/tutorials/javascript-unary-operators-simple-and-useful#toc-logical-not-
+      https://www.javascripttutorial.net/javascript-unary-operators/
+    </footer>
   </body>
 </html>
