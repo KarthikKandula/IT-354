@@ -27,7 +27,7 @@ p, ul, ol, li {
   /* Adventure Regular */
   font-family: adventure, script;
   font-weight: 400;
-  font-size: 35px !important;
+  font-size: 40px !important;
   font-style: normal;
 }
 .nav-link{
@@ -36,7 +36,37 @@ p, ul, ol, li {
 
 /* First element of every page */
 .first-nav-escape {
-  margin-top: 78px;
+  margin-top: 85px;
+}
+
+/* Borders */
+.border-1 {
+  border-top: 8px solid #2677FF;
+  border-bottom: 8px solid #2677FF;
+  border-radius: 1rem;
+  /* border-color: #2677FF;
+  border-style: solid;
+  border-width: 10px; */
+}
+.border-2 {
+  border-top: 8px solid #23A0E8;
+  border-bottom: 8px solid #23A0E8;
+  border-radius: 1rem;
+}
+.border-3 {
+  border-top: 8px solid #32E9FF;
+  border-bottom: 8px solid #32E9FF;
+  border-radius: 1rem;
+}
+.border-4 {
+  border-top: 8px solid #23E8C5;
+  border-bottom: 8px solid #23E8C5;
+  border-radius: 1rem;
+}
+.border-5 {
+  border-top: 8px solid #26FF9C;
+  border-bottom: 8px solid #26FF9C;
+  border-radius: 1rem;
 }
 
 /* Main index page */
@@ -126,18 +156,65 @@ p, ul, ol, li {
 }
 
 .clr-schme-3-1 {
-  background-color: #2677FF;
+  background-color: #DF603C;
   height: 150px;
 }
 .clr-schme-3-2 {
-  background-color: #23A0E8;
+  background-color: #F9DEB1;
 }
 .clr-schme-3-3 {
-  background-color: #32E9FF;
+  background-color: #98E4F9;
 }
 .clr-schme-3-4 {
-  background-color: #23E8C5;
+  background-color: #06A6D2;
 }
 .clr-schme-3-5 {
-  background-color: #26FF9C;
+  background-color: #0F7278;
+}
+
+.clr-schme-4-1 {
+  background-color: #024873;
+  height: 150px;
+}
+.clr-schme-4-2 {
+  background-color: #0396A6;
+}
+.clr-schme-4-3 {
+  background-color: #04BFAD;
+}
+.clr-schme-4-4 {
+  background-color: #F28963;
+}
+.clr-schme-4-5 {
+  background-color: #F25E5E;
+}
+
+/* Footer CSS */
+footer {
+  border-top: black solid;
+  height: 250px;
+  background-color: rgb(108, 255, 189);
+}
+footer a {
+  color: #FFFFFF;
+}
+footer a:hover {
+  text-decoration: none;
+}
+.float-left {
+  width: 40%;
+}
+.float-left a:hover {
+  color: #26FF9C;
+}
+.float-left p {
+  margin-bottom: 0px !important;
+  color: #FFFFFF;
+}
+
+.float-right {
+  width: 60%;
+}
+.float-right a:hover {
+  color: #2677FF;
 }

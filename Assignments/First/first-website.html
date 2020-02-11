@@ -17,29 +17,38 @@
     <title> First Website | Karthik Kandula | IT 354 </title>
   </head>
   <body>
-    <!-- Top Navigation -->
-    <nav class="navbar navbar-expand-sm navbar-dark fixed-top sticky-top nav-class"> <!-- fixed-top -->
-      <ul class="navbar-nav text-center"> <!-- <img src="Assets/Asset-2.SVG" alt="Logo Image" style="width:130px;"> -->
-        <li class="nav-item">
-          <a href="../../index.html" class="navbar-brand logo-font"> KARTHIK KANDULA </a>
-        </li>
-        <li class="nav-item text-center">
-          <a class="nav-link" href="../assignments.html">Assignments</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="first-website.html">First Website</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="first-video.html">First Video</a>
-       </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../Second/second-website.html">Second Website</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-      </ul>
-    </nav>
+    <header>
+      <!-- Top Navigation -->
+      <nav class="navbar navbar-expand-sm navbar-dark fixed-top nav-class"> <!-- fixed-top -->
+        <ul class="navbar-nav text-center"> <!-- <img src="Assets/Asset-2.SVG" alt="Logo Image" style="width:130px;"> -->
+          <li class="nav-item">
+            <a href="../../index.html" class="navbar-brand logo-font"> KARTHIK KANDULA </a>
+          </li>
+          <li class="nav-item text-center">
+            <a class="nav-link" href="../assignments.html">Assignment List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="first-website.html">Week 1 & 2 Tutorial</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="first-video.html">First Video</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Second/second-website.html">Week 3 & 4 Tutorial</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Second/second-article.html">Second Article</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Second/second-video.html">Second Video</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="jumbotron text-center first-nav-escape">
+        <h1>Week 1 & 2 Tutorial</h1>
+      </div>
+    </header>
 
     <!-- Page assingment details -->
     <div class="container-fluid p-2">
@@ -78,30 +87,30 @@
         <h4>Numbers</h4>
         <p>JavaScript only has one type of number. Numbers can be written in the following ways</p>
         <pre class="mb-0"><code> 
-var number1 = 5.75; // 5.75 --> A number with decimals
-var number2 = 5; // 5
-var number4 = 1546e6; // 1546000000 --> Numbers in exponential form
-var number5 = 1345e-5; // 0.01345
+          var number1 = 5.75; // 5.75 --> A number with decimals
+          var number2 = 5; // 5
+          var number4 = 1546e6; // 1546000000 --> Numbers in exponential form
+          var number5 = 1345e-5; // 0.01345
         </code></pre>
 
         <p>Different arithmetic operations with Numbers in JavaScript </p>
         <pre class="mb-0"><code>
-var number1 = 5.75; // Number declaration
-var number2 = 5;
+          var number1 = 5.75; // Number declaration
+          var number2 = 5;
 
-var jsAdd = number1 + number2; // 10.75 --> Addition
-var jsSub = number1 - number2; // 0.75 --> Subtraction
-var jsMul = number1 * number2; // 28.75 --> Multiplication
-var jsDiv = number1 / number2; // 1.15 --> Division
+          var jsAdd = number1 + number2; // 10.75 --> Addition
+          var jsSub = number1 - number2; // 0.75 --> Subtraction
+          var jsMul = number1 * number2; // 28.75 --> Multiplication
+          var jsDiv = number1 / number2; // 1.15 --> Division
         </code></pre>
 
         <h4>Strings</h4>
         <p>A JavaScript String is zero or more characters enclosed in single ' ' or double quotes " "</p>
         <pre><code>
-var jsString = "Hello World!" // Hello World!
+          var jsString = "Hello World!" // Hello World!
 
-var jsStringdq = "Hello World!" // Double Quotes
-var jsStringsq = 'Hello World!' // Single Quotes
+          var jsStringdq = "Hello World!" // Double Quotes
+          var jsStringsq = 'Hello World!' // Single Quotes
         </code></pre>
       </div>
     </div>
@@ -117,65 +126,65 @@ var jsStringsq = 'Hello World!' // Single Quotes
         <h4>typeof</h4>
         <p>Returns data type of the operand</p>
         <pre><code>
-var jsString = "Hello World"
-typeof(jsString) // returns 'string'
+          var jsString = "Hello World"
+          typeof(jsString) // returns 'string'
 
-var jsNum = 20
-typeof(jsNum) // returns 'number'
+          var jsNum = 20
+          typeof(jsNum) // returns 'number'
 
-typeof(true) // returns 'boolean'
-typeof(false) // returns 'boolean'
+          typeof(true) // returns 'boolean'
+          typeof(false) // returns 'boolean'
         </code></pre>
         
         <h4>Unary plus (+)</h4>
         <p>Converts the operand into a number</p>
         <p>If the operand cannot be converted into a number returns <b>NaN</b></p>
         <pre><code>
-ar a = 3
-+a // returns '3'
+          ar a = 3
+          +a // returns '3'
 
-var b = "Hello"
-+b // returns NaN
+          var b = "Hello"
+          +b // returns NaN
         </code></pre>
         
         <h4>Unary minus (-)</h4>
         <p>Converts the operand into a number and negates it</p>
         <p>If the operand cannot be converted into a number returns <b>NaN</b></p>
         <pre><code>
-ar a = 3
--a // returns '-3'
-          
-var b = "Hello"
--b // returns NaN
+          ar a = 3
+          -a // returns '-3'
+                    
+          var b = "Hello"
+          -b // returns NaN
           </code></pre>
         <h4>Logical Not (!) </h4>
         <p>Converts the operand into it's boolean equivalent and returns it's opposite</p>
         <pre><code>
-var a = true
-!a // returns 'false'
+          var a = true
+          !a // returns 'false'
 
-var b = false
-!b // returns 'true'
+          var b = false
+          !b // returns 'true'
         </code></pre>
 
         <h4>Increment (++) </h4>
         <p>This operand adds one to its value and returns it</p>
         <pre><code>
-var aaa = 5
-var bbb = 5
-console.log(++aaa)
-console.log(bbb++)
-console.log(bbb)
+          var aaa = 5
+          var bbb = 5
+          console.log(++aaa)
+          console.log(bbb++)
+          console.log(bbb)
         </code></pre>
 
         <h4>Decrement (--) </h4>
         <p>This operand subtracts one to its value and returns it</p>
         <pre><code>
-var aaa = 5
-var bbb = 5
-console.log(--aaa)
-console.log(bbb--)
-console.log(bbb)
+          var aaa = 5
+          var bbb = 5
+          console.log(--aaa)
+          console.log(bbb--)
+          console.log(bbb)
           </code></pre>
 
         <h4>delete</h4>
@@ -186,11 +195,11 @@ console.log(bbb)
           <li><b>false</b> - if failed to delete an item </li>
         </ul>
         <pre><code>
-var numArray = [1,2,3]
-delete numArray[1] // returns 'true'
+          var numArray = [1,2,3]
+          delete numArray[1] // returns 'true'
 
-var delVar = 10
-delete delVar // returns 'false'
+          var delVar = 10
+          delete delVar // returns 'false'
         </code></pre>
 
       </div>
