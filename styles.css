@@ -193,19 +193,17 @@ p, ul, ol, li {
 footer {
   border-top: black solid;
   height: 250px;
-  background-color: rgb(108, 255, 189);
+  background-color: #2677FF;
 }
 footer a {
   color: #FFFFFF;
 }
 footer a:hover {
+  color: #26FF9C;
   text-decoration: none;
 }
 .float-left {
   width: 40%;
-}
-.float-left a:hover {
-  color: #26FF9C;
 }
 .float-left p {
   margin-bottom: 0px !important;
@@ -214,7 +212,4 @@ footer a:hover {
 
 .float-right {
   width: 60%;
-}
-.float-right a:hover {
-  color: #2677FF;
 }
