@@ -213,3 +213,9 @@ footer a:hover {
 .float-right {
   width: 60%;
 }
+
+/* Sources for all pages */
+.sources p{
+  font-size: 13px;
+  margin: 0px;
+}
