@@ -1,0 +1,44 @@
+/* p, pre, ul {
+    margin-bottom: 0px !important;
+} */
+
+/* Background colors based on color scheme */
+.bckcol1 {
+    background-color: #2677FF;
+}
+.bckcol2 {
+    background-color: #23A0E8;
+}
+.bckcol3 {
+    background-color: #32E9FF;
+}
+.bckcol4 {
+    background-color: #23E8C5;
+}
+.bckcol5 {
+    background-color: #26FF9C;
+}
+
+.sources p{
+    font-size: 13px;
+}
+
+/* redesign styles */
+.div-left {
+    background-color: #273747;
+    color: white;
+    float: left;
+    height: 100%;
+    width: 25%;
+    padding: 6% 1%;
+    position: fixed;
+}
+.div-left p {
+    margin: 0px !important;
+}
+.div-right {
+    background-color: #F2F6F7;
+    float: right;
+    height: 100%;
+    width: 74%;
+}

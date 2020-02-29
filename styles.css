@@ -8,8 +8,10 @@
   src: url(Assets/Fonts/Cantarell-Regular.ttf);
 }
 
+/* Fonts Implementation */
 h1, h2, h3, h4, h5, h6, a {
   font-family: Cantarell;
+  color: #1063C3;
 }
 p, ul, ol, li {
   font-family: Palatino;
@@ -27,7 +29,7 @@ p, ul, ol, li {
   /* Adventure Regular */
   font-family: adventure, script;
   font-weight: 400;
-  font-size: 40px !important;
+  font-size: 45px !important;
   font-style: normal;
 }
 .nav-link{
@@ -235,4 +237,29 @@ footer a:hover {
 .sources p{
   font-size: 13px;
   margin: 0px;
+}
+
+/* ***************************
+    redesign styles
+  **************************** */
+a {
+  color: #34A3DB !important;
+  
+}
+
+a:hover {
+  color: #ED4E3E !important;
+  text-decoration: none !important;
+}
+
+.logo-font {
+  /* Adventure Regular */
+  font-family: adventure, script;
+  font-weight: 400;
+  font-size: 45px !important;
+  font-style: normal;
+}
+
+.logo-font:hover {
+  color: #ED4E3E !important;
 }
