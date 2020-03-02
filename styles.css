@@ -255,11 +255,14 @@ a:hover {
 .logo-font {
   /* Adventure Regular */
   font-family: adventure, script;
-  font-weight: 400;
-  font-size: 45px !important;
-  font-style: normal;
+  font-size: 50px !important;
 }
 
 .logo-font:hover {
   color: #ED4E3E !important;
+}
+
+.nav-list label {
+  font-size: xx-large;
+  padding-top: 10px;
 }
