@@ -1,3 +1,11 @@
+/* Body colors */
+body {
+  background-color: #F2F6F7 !important;
+}
+header {
+  text-align: center;
+}
+
 /* Font declaration */
 @font-face{
   font-family: Palatino;
@@ -17,7 +25,14 @@ p, ul, ol, li {
   font-family: Palatino;
   font-size: large;
 }
-
+@media screen and (max-width: 1024px) {
+  p, ul, ol, li {
+    font-size: medium;
+  }
+  .jumbotron {
+    display: none;
+  }
+}
 /* Links stylization */
 a {
   color: #34A3DB !important;
@@ -37,8 +52,10 @@ a:hover {
 .logo-font:hover {
   color: #ED4E3E !important;
 }
-@media screen and (max-width: 600px) {
-
+@media screen and (max-width: 1024px) {
+.logo-font {
+  font-size: 45px !important;
+}
 }
 
 /* Nav Div */
@@ -60,15 +77,27 @@ a:hover {
   height: 100%;
   width: 74%;
 }
-body {
-  background-color: #F2F6F7 !important;
-}
+@media screen and (max-width: 768px) {
+  .div-left{
+    float: none;
+    width: 100%;
+    position: initial;
+  }
+  .div-right {
+    float: none;
+    width: 100%;
+  }
+  }
 /* Nav links Stylization */
 .nav-list label {
   font-size: xx-large;
   padding-top: 10px;
 }
-
+@media screen and (max-width: 1024px) {
+  .nav-list label {
+    font-size: x-large;
+  }
+  }
 /* Sources for all pages */
 .sources p{
   font-size: 13px;
