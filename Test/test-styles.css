@@ -23,3 +23,117 @@
   .clr-schme-5-5 {
     background-color: #1063C3;
   }
+
+  /* Color Scheme container */
+.clr-schme-row{
+  color: #040404;
+}
+.clr-schme-1 {
+  background-color: #2677FF;
+  height: 150px;
+}
+.clr-schme-2 {
+  background-color: #23A0E8;
+}
+.clr-schme-3 {
+  background-color: #32E9FF;
+}
+.clr-schme-4 {
+  background-color: #23E8C5;
+}
+.clr-schme-5 {
+  background-color: #26FF9C;
+}
+
+.clr-schme-2-1 {
+  background-color: #8CAAFF;
+  height: 150px;
+}
+.clr-schme-2-2 {
+  background-color: #80B6E8;
+}
+.clr-schme-2-3 {
+  background-color: #99E9FF;
+}
+.clr-schme-2-4 {
+  background-color: #80E8E3;
+}
+.clr-schme-2-5 {
+  background-color: #8CFFD9;
+}
+
+.clr-schme-3-1 {
+  background-color: #DF603C;
+  height: 150px;
+}
+.clr-schme-3-2 {
+  background-color: #F9DEB1;
+}
+.clr-schme-3-3 {
+  background-color: #98E4F9;
+}
+.clr-schme-3-4 {
+  background-color: #06A6D2;
+}
+.clr-schme-3-5 {
+  background-color: #0F7278;
+}
+
+.clr-schme-4-1 {
+  background-color: #024873;
+  height: 150px;
+}
+.clr-schme-4-2 {
+  background-color: #0396A6;
+}
+.clr-schme-4-3 {
+  background-color: #04BFAD;
+}
+.clr-schme-4-4 {
+  background-color: #F28963;
+}
+.clr-schme-4-5 {
+  background-color: #F25E5E;
+}
+
+.clr-schme-5-1 {
+  background-color: #273747;
+  height: 150px;
+}
+.clr-schme-5-2 {
+  background-color: #ED4E3E;
+}
+.clr-schme-5-3 {
+  background-color: #F2F6F7;
+}
+.clr-schme-5-4 {
+  background-color: #34A3DB;
+}
+.clr-schme-5-5 {
+  background-color: #1063C3;
+}
+
+/* Footer CSS */
+footer {
+  border-top: black solid;
+  height: 250px;
+  background-color: #2677FF;
+}
+footer a {
+  color: #FFFFFF;
+}
+footer a:hover {
+  color: #26FF9C;
+  text-decoration: none;
+}
+.float-left {
+  width: 40%;
+}
+.float-left p {
+  margin-bottom: 0px !important;
+  color: #FFFFFF;
+}
+
+.float-right {
+  width: 60%;
+}

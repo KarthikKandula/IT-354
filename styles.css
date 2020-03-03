@@ -18,179 +18,65 @@ p, ul, ol, li {
   font-size: large;
 }
 
-/* Nav CSS */
-.nav-link {
-  color: #FFFFFF !important;
+/* Links stylization */
+a {
+  color: #34A3DB !important;
+  
 }
-.nav-class {
-  background-color: #2677FF !important;
+a:hover {
+  color: #ED4E3E !important;
+  text-decoration: none !important;
 }
+
+/* Logo Font */
 .logo-font {
   /* Adventure Regular */
   font-family: adventure, script;
-  font-weight: 400;
-  font-size: 45px !important;
-  font-style: normal;
+  font-size: 50px !important;
 }
-.nav-link{
-  margin-top: 10px;
+.logo-font:hover {
+  color: #ED4E3E !important;
+}
+@media screen and (max-width: 600px) {
+
 }
 
-/* First element of every page */
-.first-nav-escape {
-  margin-top: 85px;
+/* Nav Div */
+.div-left {
+  background-color: #273747;
+  color: white;
+  float: left;
+  height: 100%;
+  width: 25%;
+  padding: 6% 1%;
+  position: fixed;
+}
+.div-left p {
+  margin: 0px !important;
+}
+.div-right {
+  background-color: #F2F6F7;
+  float: right;
+  height: 100%;
+  width: 74%;
+}
+/* Nav links Stylization */
+.nav-list label {
+  font-size: xx-large;
+  padding-top: 10px;
 }
 
-/* Borders */
-.border-1 {
-  border-top: 8px solid #2677FF;
-  border-bottom: 8px solid #2677FF;
-  border-radius: 1rem;
-  /* border-color: #2677FF;
-  border-style: solid;
-  border-width: 10px; */
-}
-.border-2 {
-  border-top: 8px solid #23A0E8;
-  border-bottom: 8px solid #23A0E8;
-  border-radius: 1rem;
-}
-.border-3 {
-  border-top: 8px solid #32E9FF;
-  border-bottom: 8px solid #32E9FF;
-  border-radius: 1rem;
-}
-.border-4 {
-  border-top: 8px solid #23E8C5;
-  border-bottom: 8px solid #23E8C5;
-  border-radius: 1rem;
-}
-.border-5 {
-  border-top: 8px solid #26FF9C;
-  border-bottom: 8px solid #26FF9C;
-  border-radius: 1rem;
+/* Sources for all pages */
+.sources p{
+  font-size: 13px;
+  margin: 0px;
 }
 
-/* Main index page */
-/* Beach image container */
-.image-container {
-  position:relative;
-}
-.center-text p{
-  font-family: Cantarell;
-  position: absolute;
-  top: 20%;
-  left: 25%;
-  font-size: 4vw;
-  color: #ffffff;
-}
-.center-below {
-  position: absolute;
-  top: 10%;
-  left: 20%;
-  color: #ffffff;
-}
-
-/* About me container */
-.about-me-contain {
-  background-color: #99EAFF;
-}
-.about-me-text{
-  padding: 50px;
-}
-.my-image{
-  width: 500px;
-  align-items: center;
-}
-
-/* Purpose container */
-.purpose-web-contain{
-  background-color: #8CFFD7;
-}
-.purpose-contain{
-  background-color: #FFFFFF;
-}
-.gradient-try {
-  background: linear-gradient(to right, #2677FF 0%, #26FF9C 100%);
-  
-}
-.gradient-try p {
-  font-family: Palatino;
-  font-size: large;
-}
-
+/* Index Page Styles */
 /* Color Scheme container */
 .clr-schme-row{
-  color: #040404;
+  color: #ffffff;
 }
-.clr-schme-1 {
-  background-color: #2677FF;
-  height: 150px;
-}
-.clr-schme-2 {
-  background-color: #23A0E8;
-}
-.clr-schme-3 {
-  background-color: #32E9FF;
-}
-.clr-schme-4 {
-  background-color: #23E8C5;
-}
-.clr-schme-5 {
-  background-color: #26FF9C;
-}
-
-.clr-schme-2-1 {
-  background-color: #8CAAFF;
-  height: 150px;
-}
-.clr-schme-2-2 {
-  background-color: #80B6E8;
-}
-.clr-schme-2-3 {
-  background-color: #99E9FF;
-}
-.clr-schme-2-4 {
-  background-color: #80E8E3;
-}
-.clr-schme-2-5 {
-  background-color: #8CFFD9;
-}
-
-.clr-schme-3-1 {
-  background-color: #DF603C;
-  height: 150px;
-}
-.clr-schme-3-2 {
-  background-color: #F9DEB1;
-}
-.clr-schme-3-3 {
-  background-color: #98E4F9;
-}
-.clr-schme-3-4 {
-  background-color: #06A6D2;
-}
-.clr-schme-3-5 {
-  background-color: #0F7278;
-}
-
-.clr-schme-4-1 {
-  background-color: #024873;
-  height: 150px;
-}
-.clr-schme-4-2 {
-  background-color: #0396A6;
-}
-.clr-schme-4-3 {
-  background-color: #04BFAD;
-}
-.clr-schme-4-4 {
-  background-color: #F28963;
-}
-.clr-schme-4-5 {
-  background-color: #F25E5E;
-}
-
 .clr-schme-5-1 {
   background-color: #273747;
   height: 150px;
@@ -200,69 +86,11 @@ p, ul, ol, li {
 }
 .clr-schme-5-3 {
   background-color: #F2F6F7;
+  color: #273747;
 }
 .clr-schme-5-4 {
   background-color: #34A3DB;
 }
 .clr-schme-5-5 {
   background-color: #1063C3;
-}
-
-/* Footer CSS */
-footer {
-  border-top: black solid;
-  height: 250px;
-  background-color: #2677FF;
-}
-footer a {
-  color: #FFFFFF;
-}
-footer a:hover {
-  color: #26FF9C;
-  text-decoration: none;
-}
-.float-left {
-  width: 40%;
-}
-.float-left p {
-  margin-bottom: 0px !important;
-  color: #FFFFFF;
-}
-
-.float-right {
-  width: 60%;
-}
-
-/* Sources for all pages */
-.sources p{
-  font-size: 13px;
-  margin: 0px;
-}
-
-/* ***************************
-    redesign styles
-  **************************** */
-a {
-  color: #34A3DB !important;
-  
-}
-
-a:hover {
-  color: #ED4E3E !important;
-  text-decoration: none !important;
-}
-
-.logo-font {
-  /* Adventure Regular */
-  font-family: adventure, script;
-  font-size: 50px !important;
-}
-
-.logo-font:hover {
-  color: #ED4E3E !important;
-}
-
-.nav-list label {
-  font-size: xx-large;
-  padding-top: 10px;
 }
