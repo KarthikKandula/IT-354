@@ -76,6 +76,7 @@ a:hover {
   float: right;
   height: 100%;
   width: 74%;
+  padding: 10px 0px;
 }
 @media screen and (max-width: 768px) {
   .div-left{
