@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Logo-font -->
+    <link rel="stylesheet" href="https://use.typekit.net/otu6ffb.css">
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../Tutorials/tutorial-styles.css">
+    <!-- highlight.js Highlighting code -->
+    <link rel="stylesheet" href="../Assets/highlight/styles/monokai-sublime.css">
+    <script src="../Assets/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <title> Microservices vs Monolithic | Essays | Karthik Kandula | IT 354 </title>
+</head>
+<body>
+  <div class="div-left">
+    <header>
+      <!-- Logo -->
+      <label class="logo-font text-center"> KARTHIK KANDULA</label>
+      <!-- Nav Items -->
+      <div class="container-fluid pt-3">
+          <div class="container text-center">
+              <div class="nav-list">
+                  <label><a href="../index.html">Home</a></label> <br>
+                  <label><a href="../Tutorials/tutorials-home.html">Tutorials</a></label> <br>
+                  <label><a href="../Essays/essays-home.html">Essays</a></label> <br>
+                  <label><a href="../Videos/videos-home.html">Videos</a></label> <br>
+              </div>
+          </div>
+      </div>
+  </header>
+  </div>
+
+  <div class="div-right">
+    <div class="container-fluid pt-3">
+      <div class="container">
+        <h1 class="text-center">Microservices vs Monolithic Architecture</h1>
+        <p>Despite coming into light only a few years ago, microservices are an accelerating trend these days.
+          Microservices approach offers tangible benefits including an increase in scalability, flexibility, agility 
+          and other advantages. Tech leaders like Netflix, Google, Amazon have successfully switched from monolithic
+          architecture to microservices architecture. </p>
+        <p>On the other side, monolithic approach is the default model for creating a software application. 
+          Its trend is going down because building a monolithic application poses a number of challenges like
+          handling a huge code base, adopting a new technology, scaling, deployment, implementing new changes & others. </p>
+        <h2>Monolithic Architecture</h2>
+        <p> <b>Monolithic Architecture</b> is considered to be the traditional way of building applications. 
+        A monolithic application is built as a single unit. Usually, software applications built using monolithic 
+        Architecture comprises of a client-side user interface, a server side application and a database. </p>
+        <h4>Advantages of Monolithic Architecture</h4>
+        <ul>
+          <li>
+            <p><b>Easy to handle</b> - Because everything is included in one application, it is easier to handle.</p>
+          </li>
+          <li>
+            <p><b>Easier debugging and testing</b> - Since monolithic application is a single unit, running 
+              end-to-end testing is much easier and faster.</p>
+          </li>
+          <li>
+            <p><b>Easy to deploy</b> - Another advantage with the simplicity of a monolithic app is its ease
+            of deployment. You don't have to handle any deployments - just one file or directory. </p>
+          </li>
+          <li>
+            <p><b>Simple to develop</b> - Monolithic approach being the standard way of building applications, 
+            any engineering team has the right knowledge and capabilities of developing a monolithic app. </p>
+          </li>
+        </ul>
+        <h4>Disadvantages of Monolithic Architecture</h4>
+        <ul>
+          <li>
+            <p><b>Understanding & Scalability</b> - When a monolithic app scales up, it becomes too complicated
+            to understand. Also, a complex code with one application is hard to manage. You cannot scale 
+            components independently, only the whole application. </p>
+          </li>
+          <li>
+            <p><b>Making changes</b> - It is harder to implement changes in such a large application with 
+              complex code, since code change affects the whole system. </p>
+          </li>
+          <li>
+            <p><b>New Technology barriers</b> - It is highly problematic to apply a new technology because the entire
+            application has to be rewritten. </p>
+          </li>
+        </ul>
+        <h2>Microservices Architecture</h2>
+        <p>A <b>Microservices Architecture</b> breaks a monolithic application into a collection of smaller 
+          independent units. These units carry out every application process as a seperate service. So each 
+        individual service have their own logic & the database to perform the specific functions.</p>
+        <p>Within the microservices architecture, the entire functionality is split into different modules
+          which communicate with each other through defined methods called <b>APIs</b> (Application Programming Interfaces).
+        </p>
+        <h4>Advantages of Microservices Architecture</h4>
+        <ul>
+          <li>
+            <p><b>Independent components</b> - All services can be deployed and updated independently, which
+            adds to flexibility. It is much easier to add features to a microservices application than a 
+            monolithic application. A bug in any of the services will not shut down the entire application but 
+            has impact only on the particular service. </p>
+          </li>
+          <li>
+            <p><b>Easier Understanding & Better Scalability</b> - Because it is split into smaller & simpler components,
+            a microservice application is easier to understand and manage. Another advantage of the microservices approach
+            is that each element can be scaled independently.  </p>
+          </li>
+          <li>
+            <p><b>Flexibility in choosing the technology</b> - Teams are not limited by the technology chosen fromt the start.
+            They are free to apply various technologies and frameworks for each microservice. </p>
+          </li>
+        </ul>
+        <h4>Disdvantages of Microservices Architecture</h4>
+        <ul>
+          <li>
+            <p><b>Extra complexity</b> - Since a microservices application is a distributed system, you have
+            to choose and set up the connections between all the modules and databases. </p>
+          </li>
+          <li>
+            <p><b>System distribution</b> - A microservices architecture is a complex system of multiple 
+            modules and databases so all the connections have to be handled carefully. </p>
+          </li>
+          <li>
+            <p><b>Testing</b> - Because Microservices application is a collection of independently deployable
+            components, this makes testing a microservices-based solution much harder. </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="text-center mt-2 sources">
+      <p>Some of the content in this article might be referred from one of the following sources</p>
+      <p><a href="https://www.n-ix.com/microservices-vs-monolith-which-architecture-best-choice-your-business/">N-iX</a> | 
+        <a href="https://www.mulesoft.com/resources/api/microservices-vs-monolithic">MuleSoft</a> |
+        <a href="https://dev.to/alex_barashkov/microservices-vs-monolith-architecture-4l1m">dev.to</a> |
+        <a href="https://en.wikipedia.org/wiki/Programming_paradigm">DZone</a> </p>
+    </div>
+  </div>
+</body>
+</html>

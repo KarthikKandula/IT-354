@@ -20,6 +20,14 @@ header {
 h1, h2, h3, h4, h5, h6, a {
   font-family: Cantarell;
   color: #1063C3;
+  -webkit-transition: color 0.5s ease-out;
+  -moz-transition: color 0.5s ease-out;
+  -o-transition: color 0.5s ease-out;
+  -ms-transition: color 0.5s ease-out;
+  transition: color 0.5s ease-out;
+}
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
+  color: #273747;
 }
 p, ul, ol, li {
   font-family: Palatino;
@@ -33,10 +41,10 @@ p, ul, ol, li {
     display: none;
   }
 }
+
 /* Links stylization */
 a {
   color: #34A3DB !important;
-  
 }
 a:hover {
   color: #ED4E3E !important;
@@ -48,6 +56,11 @@ a:hover {
   /* Adventure Regular */
   font-family: adventure, script;
   font-size: 50px !important;
+  -webkit-transition: color 0.5s ease-out;
+  -moz-transition: color 0.5s ease-out;
+  -o-transition: color 0.5s ease-out;
+  -ms-transition: color 0.5s ease-out;
+  transition: color 0.5s ease-out;
 }
 .logo-font:hover {
   color: #ED4E3E !important;

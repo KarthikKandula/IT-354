@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Logo-font -->
+    <link rel="stylesheet" href="https://use.typekit.net/otu6ffb.css">
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../Tutorials/tutorial-styles.css">
+    <!-- highlight.js Highlighting code -->
+    <link rel="stylesheet" href="../Assets/highlight/styles/monokai-sublime.css">
+    <script src="../Assets/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <title> Prototypal Inheritance, this keyword | Tutorials | Karthik Kandula | IT 354</title>
+</head>
+<body>
+  <div class="div-left">
+    <header>
+      <!-- Logo -->
+      <label class="logo-font text-center"> KARTHIK KANDULA</label>
+      <!-- Nav Items -->
+      <div class="container-fluid pt-3">
+          <div class="container text-center">
+              <div class="nav-list">
+                  <label><a href="../index.html">Home</a></label> <br>
+                  <label><a href="../Tutorials/tutorials-home.html">Tutorials</a></label> <br>
+                  <label><a href="../Essays/essays-home.html">Essays</a></label> <br>
+                  <label><a href="../Videos/videos-home.html">Videos</a></label> <br>
+              </div>
+          </div>
+      </div>
+  </header>
+  </div>
+
+  <div class="div-right">
+    <div class="jumbotron text-center">
+      <h1>Tutorial over Prototypal Inheritance & "this" keyword</h1>
+    </div>
+
+    <!-- Prototypal Inheritance -->
+    <div class="container-fluid">
+      <div class="container">
+        <h2 class="text-center">Prototypal Inheritance</h2>
+        <p> <b>Prototypal Inheritance</b> helps us take an object and extend it. Not only copy its properties or 
+          methods, build new elements on top of it. </p>
+          <div>
+            <h3 class="fill-heading">[[Prototype]]</h3>
+          </div>
+        <h3>[[Prototype]]</h3>
+        <p>In JavaScript every object has a special hidden property <b>[[Prototype]]</b>, that is either
+        null or referencing other object. </p>
+        <h4>Prototype Attributes</h4>
+        <pre><code>
+          // Prototype Attributes
+          var automobile = {
+            hasWheels: true,
+            hasEngine: true
+          };
+          
+          var car = {
+            hasSteering: true
+          };
+          car.__proto__ = automobile; // assigning properties of object 'automibile' to object 'car'
+          
+          console.log(car) // prints { hasSteering: true }
+          console.log(car.hasWheels) // prints true
+        </code></pre>
+        <p>If you see in the above example, object <code>car</code> does not have a property named 
+          <code>hasWheels</code>, when JavaScript tries to access <code>car.hasWheels</code> it finds it
+           in <code>automobile</code> and prints true.</p>
+        <h4>Prototype Functions</h4>
+        <pre><code>
+          // Prototype Functions
+          console.log('\n',"Prototype Functions")
+          var automobile = {
+            hasWheels: true,
+            hasEngine: true,
+            engineStart() {
+              console.log("Engine Started!");
+            }
+          };
+
+          var car = {
+            hasSteering: true
+          };
+          car.__proto__ = automobile;
+
+          console.log(car) // prints { hasSteering: true }
+          car.engineStart(); // prints "Engine Started!"
+        </code></pre>
+        <p>Here we can say that <code>automobile</code> is the prototype of <code>car</code> or <code>car</code>
+          prototypically inherits <code>automobile</code>. All properties and methods in <code>automobile</code> 
+          become automatically available in <code>car</code>. Such properties are called “inherited”.</p>
+        
+        <h3>Class Inheritance</h3>
+        <p>Class inheritance is a way for one class to extend another class. So we can create new 
+          functionality on top of the existing.</p>
+        <pre><code>
+          // Class inheritance
+          console.log('\n',"Class inheritance")
+          class AutomobileClass {
+            constructor(name) {
+              this.speed = 0;
+              this.name = name;
+            }
+            run(speed) {
+              this.speed = speed;
+              console.log(`${this.name} going with speed of ${this.speed}mph.`);
+            }
+          }
+
+          class CarClass extends AutomobileClass {
+            switchOff() {
+              console.log(`${this.name} switches off!`);
+            }
+          }
+
+          let fiat = new CarClass("Fiat");
+
+          fiat.run(50); // prints Fiat going with speed of 50mph.
+          fiat.switchOff(); // prints Fiat switches off!
+        </code></pre>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="container">
+        <h2 class="text-center"> <code>this</code> keyword</h2>
+        <p>In JavaScript <code>this</code> keyword refers to the object it belongs to. I has different values
+        depending on where it is used.</p>
+        <h3><code>this</code> in a Method</h3>
+        <p>In a method, this refers to the <b>owner</b> of the method. In the below example <code>this</code> refers to 
+          the <code>car_this</code> object.</p>
+          <pre><code>
+            // this in a Method
+            var car_this = {
+              type:"Fiat", 
+              model:"500", 
+              color:"white",
+              allDetails : function() {
+                return this.type + " " + this.model + " is a " + this.color + " car.";
+              }
+            };
+            console.log(car_this.allDetails()) // prints Fiat 500 is a white car.
+          </code></pre>
+          <p>In an object method (similar to the above example) or a JavaScript method, <code>this</code> 
+            refers to the <b>owner object.</b></p>
+        <h3><code>this</code> Alone</h3>
+        <p>When used alone <code>this</code> returns a <b>Global object</b>.</p>
+        <h4>Global Object</h4>
+        <pre><code>
+          // 'this' Alone - Global object
+          function thisGlobalObject(x) {
+            x = 4
+            console.log(this.x); // prints 5
+          }
+          x = 5;
+          thisGlobalObject(x);
+        </code></pre>
+        <p>If you see in the above example, <code>this.x</code> refers to the global variable <code>x = 5</code>,
+           rather than 'x = 4' inside the function. </p>
+        <h4>Window Object</h4>
+        <p>In a browser window the Global object is <code>[object Window]</code>, also called the <b>Window object</b>.</p>
+        <pre><code>
+          // 'this' Alone - Window object
+          function thisWindowObject() {
+            console.log(this); // prints [object Window]
+          }
+          thisWindowObject();
+        </code></pre>
+        <h3><code>this</code> in a Function</h3>
+        <p>In a JavaScript function, owner of the function is the default binding for <code>this</code>. So,
+          in a function, <code>this</code> refers to the Global object <code>[object Window]</code></p>
+        <h4><code>this</code> in a Function - Default</h4>
+        <pre><code>
+          // 'this' in a Function - Default
+          function thisinFunction_Default() {
+            return this;
+          }
+          var thisFunction_Default = thisinFunction_Default();
+          console.log(thisFunction_Default); // prints [object Window]
+        </code></pre>
+        <h4><code>this</code> in a Function - Strict</h4>
+        <p>JavaScript <b>strict mode</b> does not allow default binding. So, when used in a function, in Strict
+        mode, <code>this</code> is <code>undefined</code>. </p>
+        <pre><code>
+          // 'this' in a Function - Strict
+          function thisinFunction_Strict() {
+            "use strict";
+            return this;
+          }
+          var thisFunction_Strict = thisinFunction_Strict();
+          console.log(thisFunction_Strict); // prints undefined
+        </code></pre>
+      </div>
+    </div>
+
+    <!-- Sources -->
+    <div class="text-center mt-2 sources">
+      <p>Some of the content on this page might be referred from one of the following sources</p>
+      <p><a href="https://javascript.info/prototype-inheritance">JavaScript.info Prototypal Inheritance</a> | 
+      <a href="https://javascript.info/class-inheritance">JavaScript.info Class Inheritance</a> | 
+      <a href="https://www.w3schools.com/js/js_this.asp">w3schools this keyword</a>
+
+    </div>
+  </div>
+</body>
+</html>

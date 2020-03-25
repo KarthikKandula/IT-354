@@ -1,0 +1,11 @@
+/* Fourth Tutorial Prototype heading style */
+.fill-heading {
+    background-color: #273747;
+    color: #F2F6F7;
+    padding: 4px;
+    display: inline-block;
+}
+.fill-heading:hover {
+    background-color:#F2F6F7 ;
+    color: #273747;
+}
