@@ -39,7 +39,7 @@
               </div>
           </div>
       </div>
-  </header>
+    </header>
   </div>
 
   <div class="div-right">
@@ -47,12 +47,308 @@
       <h1>Tutorial over Modules, Higher order functions & Advanced array methods</h1>
     </div>
 
+    <!-- Modules -->
+    <div class="container-fluid">
+      <div class="container">
+        <h2 class="text-center">Modules</h2>
+        <p>As our application grows bigger, we want to split the code into multiple files,
+          also called "<i>Modules</i>". A module usually contains a class or collection 
+          of functions. </p>
+        <p> Modules are usually self-contained with distinct functionality, allowing them 
+          to be shuffled, removed, or added as necessary </p>
+        <p>When JavaScript was first created, scripts were small and simple. But eventually
+          scripts became more and more complex, so the community invented ways to organize
+          code into modules to load on demand. </p>
+
+        <h4>What is a module?</h4>
+        <p>A module is just a file. One script is one module.</p>
+        <p>Modules can load each other and use special directives <code>export</code> and 
+          <code>import</code> to call functions of one module from another one. </p>
+        <ul>
+          <li><code>export</code>: Labels variables and functions that should be accessible
+          from outside the current module.</li>
+          <li><code>import</code>: Allows to import the functionality from other modules.</li>
+        </ul>
+        <p>For instance we have a file <code>first-modules.js</code> exporting a variable and a function </p>
+        <pre><code>
+          // Exporting a variable
+          var someNum = 5;
+          module.exports.someNum = someNum;
+
+          // Exporting a function
+          module.exports.sayHelloType1 = function sayHello(user) {
+            console.log(`Hello ${user}`)
+            console.log("This is the function that exports whole function","\n")
+          }
+
+          // Exporting a function as a variable
+          var Type2Func = function sayHelloType2(user) {
+            console.log(`Hello ${user}`)
+            console.log("This is the function that exports function in a variable","\n")
+          }
+          module.exports.sayHelloType2 = Type2Func
+        </code></pre>
+        <p>Then we have another file <code>second-modules.js</code> that imports it</p>
+        <pre><code>
+          const firstmodules = require("./first-modules.js");
+
+          firstmodules.sayHelloType1("Mark!") // prints Hello Mark! This is the function that exports whole function 
+
+          firstmodules.sayHelloType2("Mark!") // prints Hello Mark! This is the function that exports function in a variable 
+
+          console.log(firstmodules.someNum) // prints 5
+        </code></pre>
+        <p>Now that we know what is a module and how to use a module, let's see why use
+          modules? </p>
+        <h4>Why use modules?</h4>
+        <h5>Maintainability</h5>
+        <p>A module is self-contained. A well-designed module aims to lessen the dependencies on parts of
+          code as much as possible. Updating a single module is much easier when the module is decoupled 
+          from other pieces of code. </p>
+        <h5>Namespacing</h5>
+        <p>In JavaScript, variables outside the scope of a function are global variables. Because of this,
+          it's common to have <i>namespace pollution</i>, where unrelated code shares global variables </p>
+        <p> Modules allow us to avoid namespace pollution by creating a private space for variables in modules. </p>
+        <h5>Reusability</h5>
+        <p>We can reuse module over and over again. Just import the module into your script and start using,
+          it's that simple. </p>
+      </div>
+    </div>
+
+    <!-- Higher order functions -->
+    <div class="container-fluid">
+      <div class="container">
+        <h2 class="text-center">Higher Order Functions</h2>
+        <p>Higher order Functions are functions that operate on other functions, either by taking them as
+          arguments or by returning them. In other words, A Higher-Order function is a function that receives
+          a function as an argument or returns the function as output. </p>
+        <p>Let's see an example...</p>
+        <p>This is a regular function performing addition of two numbers</p>
+        <pre><code>
+          // Example of Addition using a normal function
+          function regularAdd(a,b) {
+            return a + b;
+          }
+          var regularFuncAdd = regularAdd(10,20);
+          console.log(regularFuncAdd); // prints 30
+        </code></pre>
+        <p>Now let's see the Higher-Order equivalent of this...</p>
+        <pre><code>
+          // Example of Addition using a Higher-Order Function
+          HOadd = (x) => (y) => x + y; 
+
+          result = HOadd(10)(20);
+          
+          console.log(result); // prints 30
+        </code></pre>
+        <p>If you watch closely, two numbers for addition have been passed in a single function call <code>HOadd(10)(20)</code>. We can call 
+          function <code>HOadd</code> one argument at a time. Let's see an example of that... </p>
+        <pre><code>
+          // Calling a Higher-Order Function one argument at a time 
+          HOadd = (x) => (y) => x + y; 
+          
+          var HOadd10 = HOadd(10);
+          var result = HOadd10(20);
+          console.log(result); // prints 30
+        </code></pre>
+        <p>There is another way of performing a Higher-Order Function. Let's see an Addition function in that form...</p>
+        <pre><code>
+          // Example of Addition using another version of Higher-Order Function
+          function HOaddV2(n) {
+            return m => m + n;
+          }
+
+          let add10 = HOaddV2(10);
+          console.log(add10(20)); // prints 30
+        </code></pre>
+        <p>Let's see another example of an Higher-Order Function...</p>
+        <p>This is a regular function to find out greater of two numbers</p>
+        <pre><code>
+          // Example of greater than using a normal function
+          function regularGreaterThan(a,b) {
+            if(a > b) {
+              console.log(`${a} is greater than ${b}`);
+            } 
+            else if (b > a) {
+              console.log(`${a} is less than ${b}`);
+            }
+            else {
+              console.log(`${a} is equal than ${b}`);
+            }
+          }
+          regularGreaterThan(2,3); // prints 2 is less than 3
+          regularGreaterThan(5,4); // prints 5 is greater than 4
+          regularGreaterThan(10,10); // prints 10 is equal than 10
+        </code></pre>
+        <p>Now let's see the Higher-Order equivalent of this...</p>
+        <pre><code>
+          // Example of greaterThan using a Higher-Order Function
+          HOgreaterThan = (x) => (y) => x > y;
+
+          result = HOgreaterThan(10)(20); // prints false
+
+          console.log(result);
+        </code></pre>
+        <p>If you watch closely, two numbers for addition have been passed in a single function call <code>HOgreaterThan(10)(20);</code>. 
+          We can call function <code>HOgreaterThan</code> one argument at a time. Let's see an example of that...</p>
+        <pre><code>
+          // Calling a Higher-Order Function one argument at a time 
+          HOgreaterThan = (x) => (y) => x > y;
+
+          var HOgreaterThan10 = HOgreaterThan(10);
+          var result = HOgreaterThan10(5);
+          console.log(result); // prints true
+        </code></pre>
+        <p>There is another way of performing a Higher-Order Function. Let's see a greaterThan function in that form...</p>
+        <pre><code>
+          // Example of greaterThan using another version of Higher-Order Function
+          function greaterThan(n) {
+            return m => m > n;
+          }
+          let greaterThan10 = greaterThan(10);
+          console.log(greaterThan10(11)); // prints false
+        </code></pre>
+      </div>
+    </div>
+
+    <!-- Advanced array methods -->
+    <div class="container-fluid">
+      <div class="container">
+        <h2 class="text-center">Advanced Array Methods</h2>
+        <p>In JavaScript, arrays are used to store multiple values in a single variable. An array can hold many values under a single name, 
+          and you can access the values by referring to an index number.</p>
+        <pre><code>
+          // Sample array
+          var cars = ["Toyota", "Hyundai", "Tesla", "KIA"];
+          console.log(cars); // prints [ 'Toyota', 'Hyundai', 'Tesla', 'KIA' ]
+        </code></pre>
+        <p>In the example above, we can say that <code>cars</code> is an array of cars. To access data in array <code>cars</code> we use the below syntax </p>
+        <pre><code>
+          console.log(cars[0]); // prints Toyota
+          console.log(cars[1]); // prints Hyundai
+          console.log(cars[2]); // prints Tesla
+          console.log(cars[3]); // prints KIA
+        </code></pre>
+        <p>In JavaScript, we have some nice built in functions for dealing with arrays that can simplify code, making it easier to read and debug. 
+          Functions associated with arrays are a core part of the functional programming paradigm. </p>
+        <p>Let's see some Array Methods in JavaScript </p>
+
+        <h4><code>find</code></h4>
+        <p><code>find()</code> function is used to find the first element from the array that satisfies the condition. If more than one element
+        satisfies the condition then the first element satisfying the condition is returned. </p>
+        <pre><code>
+          // Function to check if a number is even
+          function isEven(element, index, array) {
+            return (element % 2 == 0);
+          }
+
+          var numArr = [1, 2, 3, 4]; // Array consisting of numbers from 1 to 4
+          var numArrEven = numArr.find(isEven); // Finding even numbers in numArr array
+          console.log(numArrEven); // prints 2
+        </code></pre>
+        <p>In the above example, there are two even numbers in the array but <code>find()</code> returns the first occurence of a number satisfying the condition.</p>
+
+        <h4><code>findIndex</code></h4>
+        <p><code>findIndex()</code> returns the first element in an array that satisfies the condition. If more than one element
+          satisfies the condition then the index of first element satisfying the condition is returned. </p>
+        <pre><code>
+          // Function to check if a number is even
+          function isEven(element, index, array) {
+            return (element % 2 == 0);
+          }
+
+          var numArr = [1, 2, 3, 4]; // Array consisting of numbers from 1 to 4
+          var numArrEven = numArr.findIndex(isEven); // Finding even numbers in numArr array
+          console.log(numArrEven); // prints 1
+        </code></pre>
+        
+        <h4><code>forEach</code></h4>
+        <p><code>forEach()</code> method calls a function once for each element in an array, in order. </p>
+        <pre><code>
+          // Function to square the given number
+          function square(element, index, array) {
+            numArrForEach.push(element * element);
+          }
+
+          var numArr = [1, 2, 3, 4];
+          var numArrForEach = [];
+          
+          numArr.forEach(square); // calling square function for each element in numArr array
+          console.log(numArrForEach) // prints [ 1, 4, 9, 16 ]
+        </code></pre>
+
+        <h4><code>filter</code></h4>
+        <p><code>filter()</code> method creates a new array with all the array elements that satisfies a condition. If more than 
+        one element satisfies the condition then every element that passes the condition is placed in the new array. </p>
+        <pre><code>
+          // Function to check if number is even
+          function isEven(element, index, array) {
+            return (element % 2 == 0);
+          }
+          var numArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+          var numArrFilter = numArr.filter(isEven); // Filtering elements in numArr array based on isEven condition
+          console.log(numArrFilter) // prints [ 2, 4, 6, 8 ]
+        </code></pre>
+
+        <h4><code>unshift</code></h4>
+        <p>Adds an element to the beginning of the array.</p>
+        <pre><code>
+          // Sample cars array
+          var cars = ["Toyota","Hyundai","Tesla","KIA", "BMW", "Fiat", "Ford", "GM"];
+          console.log(cars); // prints [ 'Toyota', 'Hyundai', 'Tesla', 'KIA', 'BMW', 'Fiat', 'Ford', 'GM' ]
+
+          cars.unshift("Nissan"); // Adds Nissan to the beginning of the cars array
+          console.log(cars); // prints [ 'Nissan', 'Toyota', 'Hyundai', 'Tesla', 'KIA', 'BMW', 'Fiat', 'Ford', 'GM' ]
+        </code></pre>
+        
+        <h4><code>push</code></h4>
+        <p>Appends an element to the end of the array.</p>
+        <pre><code>
+          // Sample cars array
+          var cars = ["Toyota","Hyundai","Tesla","KIA", "BMW", "Fiat", "Ford", "GM"];
+          console.log(cars); // prints [ 'Toyota', 'Hyundai', 'Tesla', 'KIA', 'BMW', 'Fiat', 'Ford', 'GM' ]
+
+          cars.push("Honda"); // Adds Honda to the end of the cars array
+          console.log(cars); // prints [ 'Toyota', 'Hyundai', 'Tesla', 'KIA', 'BMW', 'Fiat', 'Ford', 'GM', 'Honda' ]
+        </code></pre>
+        
+        <h4><code>shift</code></h4>
+        <p>Extracts the first element of the array, returns and removes it.</p>
+        <pre><code>
+          // Sample cars array
+          var cars = ["Toyota","Hyundai","Tesla","KIA", "BMW", "Fiat", "Ford", "GM"];
+          console.log(cars); // prints [ 'Toyota', 'Hyundai', 'Tesla', 'KIA', 'BMW', 'Fiat', 'Ford', 'GM' ]
+
+          console.log(cars.shift()); // Displays & removes first element | prints Toyota
+          console.log(cars); // prints [ 'Hyundai', 'Tesla', 'KIA', 'BMW', 'Fiat', 'Ford', 'GM' ]
+        </code></pre>
+
+        <h4><code>pop</code></h4>
+        <p>Extracts the last element of the array and returns it.</p>
+        <pre><code>
+          // Sample cars array
+          var cars = ["Toyota","Hyundai","Tesla","KIA", "BMW", "Fiat", "Ford", "GM"];
+          console.log(cars); // prints [ 'Toyota', 'Hyundai', 'Tesla', 'KIA', 'BMW', 'Fiat', 'Ford', 'GM' ]
+
+          console.log(cars.pop()); // Displays & removes last element | prints GM
+          console.log(cars); // prints [ 'Toyota', 'Hyundai', 'Tesla', 'KIA', 'BMW', 'Fiat', 'Ford' ]
+        </code></pre>
+
+      </div>
+    </div>
+
     <!-- Sources -->
     <div class="text-center mt-2 sources">
       <p>Some of the content on this page might be referred from one of the following sources</p>
-      <p><a href="https://javascript.info/prototype-inheritance">JavaScript.info Prototypal Inheritance</a> | 
-      <a href="https://javascript.info/class-inheritance">JavaScript.info Class Inheritance</a> | 
-      <a href="https://www.w3schools.com/js/js_this.asp">w3schools this keyword</a>
+      <p>Modules - <a href="https://www.freecodecamp.org/news/javascript-modules-a-beginner-s-guide-783f7d7a5fcc/">freeCodeCamp JS Modules</a> | 
+      <a href="https://javascript.info/modules-intro">JavaScript.info Modules</a> |  
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">MDN web docs JS Modules</a> </p>
+      <p>Higher Order Functions - <a href="https://blog.bitsrc.io/understanding-higher-order-functions-in-javascript-75461803bad">bitsrc.io JS Higher-Order Functions</a> | 
+        <a href="https://www.freecodecamp.org/news/a-quick-intro-to-higher-order-functions-in-javascript-1a014f89c6b/">freeCodeCamp JS Higher-Order Functions</a> |
+        <a href="https://eloquentjavascript.net/05_higher_order.html#h_8AV6kA9jcD">Higher-Order Functions</a> </p>
+      <p>Advanced Array Methods - <a href="https://javascript.info/array">JavaScript.info Arrays</a> | 
+        <a href="https://www.w3schools.com/jsref/jsref_obj_array.asp">w3schools.com JS Array Reference</a> | 
+        <a href="https://www.geeksforgeeks.org/javascript-basic-array-methods/?ref=lbp"> GeeksforGeeks JS Basic Array Methods</a>  </p>
     </div>
   </div>
 </body>

@@ -44,19 +44,36 @@
   </div>
 
   <div class="div-right">
-    <div class="container-fluid pt-3">
+    <div class="container-fluid">
       <div class="container">
         <h1 class="text-center">The MITT ROMNEY web font problem</h1>
-        
+        <p> The MITT ROMNEY web font problem is nothing but the browser hiding text while the web font is loading. 
+          This problem occurs when you use multiple weights and styles of the same typeface together.</p>
+        <p>The problem came into existence when an article written by <a href="https://slate.com/">Slate.com</a> used different 
+          fonts for its regular and italic text. </p>
+        <img src="../Assets/Images/Essay-Images/Mitt-Romney-before-image.jpg" alt="The Mitt Romney web font problem" width="650" class="text-center">
+        <p>The headline from <a href="https://slate.com/">Slate.com</a> was important breaking news about Mitt Romney's intention to run for President. 
+        The headline was rendered using two different web fonts, one for regular and one for italic.</p>
+        <p>This is how the page looks when all the web fonts have loaded:</p>
+        <img src="../Assets/Images/Essay-Images/Mitt-Romney-after-image.jpg" alt="The Mitt Romney web font problem" width="650">
+        <p> To explain why this happened, we have to become familiar with the Flash of Invisible Text (FOIT), or how the browser hides the text while 
+          web font is loading. Each web font has its own seperate FOIT. By combining two web fonts together in a single headline, there is a preference order for FOIT. </p>
+        <p> At one point the headline indicated that Mitt Romney is running for President. When the page finishes loading, the real message is Mitt 
+          Romney is not running for President. Obviously, this is bad, especially for a news organization that depends on clarity and accuracy. </p>
+        <p>There are a few ways to deal with this problem </p>
+        <ol>
+          <li><p>Eliminating FOIT by switching to unstyled fallback text while the font is loading.</p></li>
+          <li><p>We can also use <a href="https://www.zachleat.com/web/foft/">Flash of Faux Text</a> approach, utilizing font-synthesis to show browser 
+          generated bold and italic fallbacks until the real web fonts load. </p></li>
+        </ol>
       </div>
     </div>
 
     <div class="text-center mt-2 sources">
       <p>Some of the content in this article might be referred from one of the following sources</p>
-      <p><a href="https://www.n-ix.com/microservices-vs-monolith-which-architecture-best-choice-your-business/">N-iX</a> | 
-        <a href="https://www.mulesoft.com/resources/api/microservices-vs-monolithic">MuleSoft</a> |
-        <a href="https://dev.to/alex_barashkov/microservices-vs-monolith-architecture-4l1m">dev.to</a> |
-        <a href="https://en.wikipedia.org/wiki/Programming_paradigm">DZone</a> </p>
+      <p><a href="https://www.zachleat.com/web/mitt-romney-webfont-problem/">ZachLeat Mitt Romney Web Font Problem</a> </p>
+      <p> Images - Both images are tweets by <a href="https://twitter.com/jmuspratt">James Muspratt</a> | 
+        Image link - <a href="https://twitter.com/jmuspratt/status/561239961924403200"> Tweet by James Muspratt </a> </p>
     </div>
   </div>
 </body>
