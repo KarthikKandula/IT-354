@@ -44,13 +44,199 @@
 
   <div class="div-right">
     <div class="jumbotron text-center">
-      <h1>Tutorial over API's | Coming soon..</h1>
+      <h1>Tutorial over API's </h1>
+    </div>
+
+    <div class="container-fluid">
+      <div class="container">
+        <h2 class="text-center">APIs</h2>
+        <p> <b>Application Programming Interfaces</b> (APIs) are constructs made availabe in programming languages to allow developers to create complex 
+          functionality more easily. APIs provide easy syntax to use taking the complex code away from developers.</p>
+        <p>As a real-world example, think abou tthe electricity supply in your house. If you want to use an appliance in your house, you plug it into a 
+          plug socket and it works. You don't try to wire it directly into the power supply. A plug socket makes the work easier by taking away the complex
+          wiring system. Same with APIs. </p>
+        
+        <h3>What can APIs do?</h3>
+        <p>There are a huge number of APIs available in modern browsers that allow you to do a wide variety of things in your code. Most common categories
+         of browser APIs are</p>
+        <h5>APIs for manipulating documents</h5>
+        <p>The most obvious example is the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">DOM (Document Object Model) API</a>
+         which allows you to manipulate HTML and CSS - creating, removing and changing HTML. </p>
+        <h5>APIs that fetch data from the server</h5>
+        <p>APIs that fetch data from the server are used to update small sections of a webpage on their own and are very commonly used. This seemingly small 
+          detail has had a huge impact on the performance and behaviour of sites. </p>
+        <h5>Audio and Video APIs</h5>
+        <p> Audio and Video APIs like <code>HTMLMediaElement</code>, the web Audio API allow you to do really interesting things with multimedia such as creating
+        custom UI controls for playing audio and video, displaying text tracks like captions and subtitles. </p>
+        <h5>Client-side storage APIs</h5>
+        <p> Client-side storage APIs are becoming a lot more widespread in web browsers - the ability to store data on the client-side is very useful if you want 
+          to create an app that will save its state between page loads, and perhaps even work when the device is offline. </p>
+        
+        <h3>Web service APIs</h3>
+        <p>There are a lot of different types of APIs, but we will discuss <b>Web service APIs</b> in general</p>
+        <p>A web service is a system or software that uses an address, i.e., URL on the World Wide Web, to provide access to its services.</p>
+        <p>The following are the most common types of web service APIs:</p>
+        <h5>SOAP (Simple Object Access Protocol)</h5>
+        <p>This is a protocol that uses XML as a format to transfer data. Its main function is to define the structure of the messages and methods of communication.</p>
+        <h5>XML-RPC</h5>
+        <p>This is a protocol that uses a specific XML format to transfer data compared to SOAP that uses a proprietary XML format. It is also older than SOAP. XML-RPC 
+          uses minimum bandwidth and is much simpler than SOAP.</p>
+        <h5>JSON-RPC</h5>
+        <p>This protocol is similar to XML-RPC but instead of using XML format to transfer data it uses JSON. </p>
+        <h5>REST (Representational State Transfer)</h5>
+        <p>REST is not a protocol like the other web services, instead, it is a set of architectural principles. Like all other architectural style, REST has it's own
+          guiding principles which must be satisfied if an interface needs to be referred as <b>RESTful</b>. These principles are:</p>
+        <ol>
+          <li>Uniform interface</li>
+          <li>Client–server</li>
+          <li>Stateless </li>
+          <li>Cacheable</li>
+          <li>Layered system</li>
+          <li>Code on demand (optional)</li>
+        </ol>
+
+        <h3>How to use an API</h3>
+        <p>We will try to keep things simple, so to demonstrate examples I will be using <a href="https://opentable.herokuapp.com/">OpenTable API</a> -  API interface 
+          to search OpenTable restaurant data. </p>
+        <h5>CRUD and types of requests</h5>
+        <p>CRUD is a programming concept denoting four basic actions <b>Create, Read, Update</b> and <b>Delete</b> that can be performed on a data source. In a 
+        REST API, these actions correspond to types of requests or request methods. These are four most commonly used requests: </p>
+        <ul>
+          <li><p><b>POST:</b> Create action. Adds new data to the server.</p></li>
+          <li><p><b>GET:</b> Read action. Retrieves information. This is the most common type of request. Using this, we can get the data we are interested.</p></li>
+          <li><p><b>PUT:</b> Update action. Changes existing information. Using this request, it would be possible modify or overwrite existing data.</p></li>
+          <li><p><b>DELETE:</b> Delete action. Deletes existing information.</p></li>
+        </ul>
+        <h5>Endpoints</h5>
+        <p>In order to work with REST APIs, it is important to understand the Endpoint concept. Endpoint is a specific address, by referring to which you get
+          access to certain features/data. Commonly, the name of the endpoint corresponds to the functionality it provides. </p>
+        <p>Let's see an example of API request in JavaScript...</p>
+        <pre><code>
+          // API request in JavaScript using a XMLHttpRequest
+          let requestURL = 'http://opentable.herokuapp.com/api/cities';
+          let request = new XMLHttpRequest();
+          request.open('GET', requestURL);
+          request.responseType = 'json';
+          request.send();
+
+          request.onload = function() {
+            const responseObject = JSON.parse(this.responseText)
+            console.log(responseObject) // prints the response from API which is an object that contains all cities in the API
+          }
+        </code></pre>
+        <p>If you see in the above example, variable <code>requestURL</code> holds a link also known as an <b>Endpoint</b>. Using this endpoint we get 
+          cities data. Most of the times endpoint names are self-explanatory to the data they return. </p>
+        <p>The result for above API call will be in the following format...</p>
+        <pre><code>
+          // result for Endpoint /api/cities 
+          { count: 2719,
+            cities:
+             [ 'Abilene',
+               'Abingdon',
+               'Abington',
+               'Absecon',
+               'Acapulco',
+               'Acme',
+               'Acton',
+               'Adamstown',
+               'Addison',
+               'Afton',
+               'Agawam',
+               'Agoura Hills',
+               'Agua Dulce',
+               'Aguascalientes',
+               'Ahwatukee',
+               ... 2619 more items ] }
+        </code></pre>
+        <p>Let's see another API call with a different endpoint for the same API</p>
+        <pre><code>
+          // API request in JavaScript using a XMLHttpRequest
+          var requestURL = 'http://opentable.herokuapp.com/api/restaurants?zip=61761';
+          var request = new XMLHttpRequest();
+          request.open('GET', requestURL);
+          request.responseType = 'json';
+          request.send();
+
+          request.onload = function() {
+            var responseObject = JSON.parse(this.responseText)
+            console.log(responseObject)
+          }
+        </code></pre>
+        <p>In the above example we are performing a restaurant search by passing parameter <code>zip=61761</code>(Normal,IL zip code). The result shows that 
+        the API has 1 restaurant under the zip code 61761  </p>
+        <pre><code>
+          // result for Endpoint /restaurants search
+          {
+            "total_entries": 1,
+            "per_page": 25,
+            "current_page": 1,
+            "restaurants": [
+                {
+                    "id": 91414,
+                    "name": "Medici in Normal",
+                    "address": "120 W North St",
+                    "city": "Normal",
+                    "state": "IL",
+                    "area": "Chicago / Illinois",
+                    "postal_code": "61761",
+                    "country": "US",
+                    "phone": "3094526334",
+                    "lat": 40.509479,
+                    "lng": -88.984451,
+                    "price": 2,
+                    "reserve_url": "http://www.opentable.com/single.aspx?rid=91414",
+                    "mobile_reserve_url": "http://mobile.opentable.com/opentable/?restId=91414",
+                    "image_url": "https://www.opentable.com/img/restimages/91414.jpg"
+                }
+            ]
+        }
+        </code></pre>
+        <p>Let's try to get the restaurant data using their Endpoint <code>/restaurants/:id</code> </p>
+        <pre><code>
+          // API request in JavaScript using a XMLHttpRequest
+          var requestURL = 'http://opentable.herokuapp.com/api/restaurants/91414';
+          var request = new XMLHttpRequest();
+          request.open('GET', requestURL);
+          request.responseType = 'json';
+          request.send();
+
+          request.onload = function() {
+            var responseObject = JSON.parse(this.responseText)
+            console.log(responseObject)
+          }
+        </code></pre>
+        <p>In the above example we specified restaurant id in the <code>requestURL</code>. So, we are letting the API know we need data of a specific restaurant </p>
+        <pre><code>
+          // result for Endpoint /restaurants/:id
+          {
+            "id": 91414,
+            "name": "Medici in Normal",
+            "address": "120 W North St",
+            "city": "Normal",
+            "state": "IL",
+            "area": "Chicago / Illinois",
+            "postal_code": "61761",
+            "country": "US",
+            "phone": "3094526334",
+            "lat": 40.509479,
+            "lng": -88.984451,
+            "price": 2,
+            "reserve_url": "http://www.opentable.com/single.aspx?rid=91414",
+            "mobile_reserve_url": "http://mobile.opentable.com/opentable/?restId=91414",
+            "image_url": "https://www.opentable.com/img/restimages/91414.jpg"
+        }
+        </code></pre>
+      </div>
     </div>
 
     <!-- Sources -->
     <div class="text-center mt-2 sources">
       <p>Some of the content on this page might be referred from one of the following sources</p>
-      <p><a href="https://javascript.info/prototype-inheritance">JavaScript.info Prototypal Inheritance</a> | 
+      <p><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"> MDN web docs APIs</a> | 
+      <a href="https://rapidapi.com/blog/types-of-apis/">RapidAPI Blog Types of APIs</a> | 
+      <a href="https://javascript.info/xmlhttprequest">JavaScript.info XMLHttpRequest</a> | 
+      <a href="https://rapidapi.com/blog/how-to-use-an-api-with-javascript/">RapidAPI Blog How to use an API</a> | 
+      <a href="https://javascript.info/class-inheritance">JavaScript.info Class Inheritance</a> | 
       <a href="https://javascript.info/class-inheritance">JavaScript.info Class Inheritance</a> | 
       <a href="https://www.w3schools.com/js/js_this.asp">w3schools this keyword</a>
 

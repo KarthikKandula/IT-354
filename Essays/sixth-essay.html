@@ -22,7 +22,7 @@
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <title> Node & V8 engine | Coming soon.. | Essays | Karthik Kandula | IT 354 </title>
+    <title> Node & V8 engine | Essays | Karthik Kandula | IT 354 </title>
 </head>
 <body>
   <div class="div-left">
@@ -46,17 +46,70 @@
   <div class="div-right">
     <div class="container-fluid pt-3">
       <div class="container">
-        <h1 class="text-center">Node & V8 engine | Coming soon..</h1>
+        <h1 class="text-center">Node & V8 engine </h1>
+        <p>JavaScript was created in 1995 and has since been known to be the dominant language for web development. For much of its initial days 
+          JavaScript was used mainly for client-side scripting inside <code> &lt;script&gt; </code> tags executing in web browsers. Due to this limitation,
+        developers were often using different languages and frameworks between the front-end and backend aspects of a web application. </p>
+        <h2 class="text-center"> Node </h2>
+        <p>Node.js came into existence in 2009 when the original developers of JavaScript extended it from something you could only run in the browser to something 
+          you could run on your machine as a standalone application.  </p>
+        <p>Here's a formal definition for Node.js, per the <a href="https://nodejs.org/en/">Node.js website</a>: </p>
+        <blockquote>Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine. <br> <br> Node.js uses an event-driven, non-blocking I/O model that 
+          makes it lightweight and efficient. </blockquote>
+        <p>Node allows developers to write JavaScript code that runs directly in a computer process itself instead of in a browser. Node can be used to 
+        write server-side applications with access to the operating system, file system, and everything else required to build fully-functional applications. </p>
+        <h4>Features of Node.js</h4>
+        <p>Following are some of the important features that make Node.js the first choice of developers.</p>
+        <h5>Asynchronous and Event Driven</h5>
+        <p>All APIs of Node.js library are asynchronous, that is, non-blocking. It essentially means a Node.js based server never waits for an API to return data.</p>
+        <h5>Very Fast</h5>
+        <p>Being built on Google Chrome's V8 JavaScript Engine, Node.js library is very fast in code execution.</p>
+        <h5>Single Threaded but Highly Scalable</h5>
+        <p>Node.js uses a single threaded model with event looping. Node.js uses a single threaded program and the same program can provide service to a much 
+          larger number of requests than traditional servers like Apache HTTP Server.</p>
+        <h5>No Buffering</h5>
+        <p>Node.js applications never buffer any data. These applications simply output the data in chunks.</p>
+        <h5>License</h5>
+        <p>Node.js is released under the MIT license.</p>
+
+        <h2 class="text-center"> V8 Engine </h2>
+        <p>A <b>JavaScript engine</b> is a program or an interpreter which executes JavaScript code. A JavaScript engine can be implemented as a standard
+        interpreter, or just-in-time complier that compiles JavaScript to bytecode in some form. </p>
+        <p>Here's a formal definition for V8, per the <a href="https://v8.dev/">V8 Official website</a>:</p>
+        <blockquote>V8 is Google’s open source high-performance JavaScript and WebAssembly engine, written in C++. It is used in Chrome and in Node.js, among others.
+          <br> <br> V8 compiles and executes JavaScript source code, handles memory allocation for objects, and garbage collects objects it no longer needs. V8’s 
+          stop-the-world, generational, accurate garbage collector is one of the keys to V8’s performance.
+        </blockquote>
+        <p>V8 was first designed to increase the performance of JavaScript execution inside web browsers. In order to obtain speed, V8 translates JavaScript
+          code into more efficient machine code instead of using an interpreter. It complies JavaScript code into machine code at execution by implementing
+        a <b>JIT (Just-In-Time) Compiler</b> like most of the modern JavaScript engines. </p>
+        <p>Both JavaScript and Node.js run on the V8 JavaScript runtime engine. This engine takes your JavaScript code and converts it into a faster 
+          machine code. Machine code is low-level code which the computer can run without needing to first interpret it. </p>
         
+        <h2 class="text-center">How Node.js uses V8 engine</h2>
+        <p> Let's first understand how JavaScript is compiled and Run </p>
+        <p> <b>JavaScript Program</b> (source code) &rarr; <b>Chrome V8 Engine </b> (complied) &rarr; <b>Machine Code</b> (bytecode) &rarr; Runs on CPU </p>
+        <p>Different CPU architecture requires different machine code based on its architecture. So, the program needs to be converted into the machine code 
+          the machine can understand. Javascript program is compiled and the bytecode (machine code) is optimized and finally, the machine code runs on the CPU. 
+          All these operations are performed by the V8.</p>
+        <p>Let's see where the JavaScript resides based on the closeness to the computer hardware.</p>
+        <p><b>Javascript</b> &rarr; <b>C++</b> &rarr; <b>Assembly Language</b> &rarr; <b>Machine Code</b> </p>
+        <p>JavaScript is more high level than C++ and C++ is more than the Assembly language. Closer the language to the machine better is its performance 
+          and less is its compilation complexity. </p>
+        <p>Chrome V8 engine is really fast because it is written in C++. It also manages the memory allocation for the JavaScript programs. Allocating and 
+          deallocating memory to the objects as well as managing the threads stack memory is the responsibility of the V8 engine. </p>
+        <p>Now we know the role Chrome V8 engine plays in Node.js for making JavaScript reall fast and performant.</p>
       </div>
     </div>
 
     <div class="text-center mt-2 sources">
       <p>Some of the content in this article might be referred from one of the following sources</p>
-      <p><a href="https://www.n-ix.com/microservices-vs-monolith-which-architecture-best-choice-your-business/">N-iX</a> | 
-        <a href="https://www.mulesoft.com/resources/api/microservices-vs-monolithic">MuleSoft</a> |
-        <a href="https://dev.to/alex_barashkov/microservices-vs-monolith-architecture-4l1m">dev.to</a> |
-        <a href="https://en.wikipedia.org/wiki/Programming_paradigm">DZone</a> </p>
+      <p><a href="https://www.codecademy.com/articles/what-is-node"> codecademy JS and Node.js</a> | 
+        <a href="https://www.freecodecamp.org/news/what-exactly-is-node-js-ae36e97449f5/"> freeCodeCamp Node.js</a> |
+        <a href="https://nodejs.org/en/">nodejs.org</a> |
+        <a href="https://www.tutorialspoint.com/nodejs/nodejs_introduction.htm">tutorialspoint Node.js</a> |
+        <a href="https://blog.sessionstack.com/how-javascript-works-inside-the-v8-engine-5-tips-on-how-to-write-optimized-code-ac089e62b12e">SessionStack Blog V8 engine</a> |
+        <a href="https://afteracademy.com/blog/chrome-v8-engine-javascript-runtime-for-node-js">AfterAcademy V8 engine</a> </p>
     </div>
   </div>
 </body>

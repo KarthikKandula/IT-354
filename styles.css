@@ -140,3 +140,11 @@ a:hover {
 .clr-schme-5-5 {
   background-color: #1063C3;
 }
+
+/* blockquote styles on sixth-essay */
+blockquote {
+  font-family: Palatino;
+  font-size: large;
+  padding: 0.3rem 1.5rem;
+  border-left: 3px solid #34A3DB !important;
+}
